@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gerador de Nota Fiscal</title>
+</head>
+
+<body>
+        <div class="container">
+            <h1>Emissão de Nota Fiscal de Serviço</h1>
+    
+            <label for="valorVenda">Valor da Venda (R$):</label>
+            <input type="number" id="valorVenda" placeholder="Digite o valor da venda">
+    
+            <label for="itens">Itens Vendidos:</label>
+            <textarea id="itens" placeholder="Descreva os itens vendidos"></textarea>
+    
+            <label for="irpf">Porcentagem do IRPF (%):</label>
+            <input type="number" id="irpf" placeholder="Ex: 15">
+    
+            <label for="pis">Porcentagem do PIS (%):</label>
+            <input type="number" id="pis" placeholder="Ex: 1.65">
+    
+            <label for="cofins">Porcentagem do COFINS (%):</label>
+            <input type="number" id="cofins" placeholder="Ex: 7.6">
+    
+            <label for="inss">Porcentagem do INSS (%):</label>
+            <input type="number" id="inss" placeholder="Ex: 11">
+    
+            <label for="issqn">Porcentagem do ISSQN (%):</label>
+            <input type="number" id="issqn" placeholder="Ex: 5">
+    
+            <button onclick="gerarNotaFiscal()">Gerar Nota Fiscal</button>
+            
+            <div id="errorMessages" style="color: red; margin-top: 10px;"></div>
+           
+        </div>        
+            <div class="container">
+            <div id="notaFiscal" class="nota-fiscal" style="display: none; margin-top: 20px;"></div>
+            <button onclick="exportarPDF()">Exportar em PDF</button>
+            <button onclick="exportarCSV()">Exportar em CSV</button>
+            <button onclick="imprimirNotaFiscal()">Imprimir Nota Fiscal</button>
+
+        </div>
+
+    <script src="scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</body>
+</html>
