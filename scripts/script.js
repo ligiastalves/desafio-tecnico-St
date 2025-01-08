@@ -59,11 +59,11 @@ function gerarNotaFiscal() {
         <p><strong>Valor da Venda:</strong> R$ ${parseFloat(valorVenda).toFixed(2)}</p>
         <p><strong>Itens Vendidos:</strong> ${itens}</p>
         <ul>
-        <li><strong>IRPF (15%):</strong> R$ ${irpfValue.toFixed(2)}</li>
-        <li><strong>PIS (1.65%):</strong> R$ ${pisValue.toFixed(2)}</li>
-        <li><strong>COFINS (7.6%):</strong> R$ ${cofinsValue.toFixed(2)}</li>
-        <li><strong>INSS (11%):</strong> R$ ${inssValue.toFixed(2)}</li>
-        <li><strong>ISSQN (5%):</strong> R$ ${issqnValue.toFixed(2)}</li>
+        <li><strong>IRPF (${irpf} %):</strong> R$ ${irpfValue.toFixed(2)}</li>
+        <li><strong>PIS (${pis} %):</strong> R$ ${pisValue.toFixed(2)}</li>
+        <li><strong>COFINS (${cofins} %):</strong> R$ ${cofinsValue.toFixed(2)}</li>
+        <li><strong>INSS (${inss} %):</strong> R$ ${inssValue.toFixed(2)}</li>
+        <li><strong>ISSQN (${issqn} %):</strong> R$ ${issqnValue.toFixed(2)}</li>
         </ul>
         <p><strong>Total de Impostos:</strong> R$ ${totalImpostos.toFixed(2)}</p>
         <p><strong>Valor Líquido:</strong> R$ ${valorLiquido.toFixed(2)}</p>
